@@ -26,3 +26,12 @@ run() {
     fi
     ./a.out;
 }
+
+build_d() {
+    build -D $1 $2;
+}
+
+run_d() {
+    build_d $1 $2;
+    ./a.out;
+}
