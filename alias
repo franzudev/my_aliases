@@ -12,6 +12,7 @@ alias size="du -sh"
 alias norminette="~/.norminette/norminette.rb"
 alias build="gcc -Wall -Werror -Wextra"
 alias check="norminette -R CheckForbiddenSourceHeader"
+alias build_gl="build -lmlx -framework OpenGL -framework AppKit"
 
 run() {
     build $1;
