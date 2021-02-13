@@ -1,0 +1,28 @@
+alias size="du -sh"
+
+# LARAVEL ALIAS
+alias laravel-new="/Users/franzu/.personal-conf/.laravel-init.sh"
+alias artisan="php artisan"
+alias a="php artisan"
+alias pest="./vendor/bin/pest"
+alias route_list="php artisan route:list"
+alias cache_clear="php artisan cache:clear"
+alias config_clear="php artisan config:clear"
+
+# SYSTEM ALIAS
+alias norminette="~/.norminette/norminette.rb"
+alias build="gcc -Wall -Werror -Wextra"
+alias check="norminette -R CheckForbiddenSourceHeader"
+
+run() {
+    build $1;
+    if [[ -n "${2+1}" && -n "${3+1}" ]]; then
+        ./a.out $2 $3;
+        return 0;
+    fi
+    if [[ -n "${2+1}" ]]; then
+        ./a.out $2;
+        return 0;
+    fi
+    ./a.out;
+}
